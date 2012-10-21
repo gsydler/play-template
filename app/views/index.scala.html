@@ -1,7 +1,38 @@
 @(message: String)
 
-@main("Welcome to Play 2.0") {
-    
-    @play20.welcome(message)
-    
+@styles = {
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap-responsive.css")">
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/docs.css")">
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/prettify.css")">
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+}
+
+@scripts = {
+<script src="@routes.Assets.at("javascripts/libs/require-jquery.js")" type="text/javascript" data-main="@routes.Assets.at("javascripts/main")"></script>
+}
+
+@main(Messages("company.name"), scripts, styles) {
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">@Messages("company.name")</a>
+    </div>
+  </div>
+</div>    
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Mian</h1>
+    <p class="lead">Da list top moumout</p>
+  </div>
+</header>
+<div class="container">
+	<section id="TestingArea">
+		<div class="page-header">
+	            <h1>Le testing area</h1>
+	    </div>
+		<div id="insert">
+		</div>
+	</section><!-- end of section TestingArea -->  
+</div><!-- container -->    
 }
