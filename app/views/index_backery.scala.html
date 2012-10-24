@@ -1,0 +1,269 @@
+@(message: String)
+
+@styles = {
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap-responsive.css")">
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/docs.css")">
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/prettify.css")">
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+
+<!-- Le styles -->
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .table-centered
+      {
+        margin: 0 auto !important;
+        float: none !important;
+      }
+      /* backery boxes */
+      .backery-boxes {
+        display: inline-block;
+        list-style: none outside none;
+        margin: 20px 0 10px;
+        text-align: center;
+      }
+
+      .backery-boxes li {
+          background-color: #F6F6F6;
+          background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#F9F9F9), to(#EDEDED));
+          background-image: -webkit-linear-gradient(top, #F9F9F9 0%, #EDEDED 100%);
+          background-image: -moz-linear-gradient(top, #F9F9F9 0%, #EDEDED 100%);
+          background-image: -ms-linear-gradient(top, #F9F9F9 0%, #EDEDED 100%);
+          background-image: -o-linear-gradient(top, #F9F9F9 0%, #EDEDED 100%);
+          background-image: linear-gradient(top, #F9F9F9 0%, #EDEDED 100%);
+          border: 1px solid #d5d5d5;
+          border-radius: 4px 4px 4px 4px;
+          box-shadow: 0 1px 0 0 #FFFFFF inset, 0 1px 0 rgba(255,255,255,0.4);
+          display: inline-block;
+          line-height: 18px;
+          margin: 0 10px 10px;
+          padding: 0 10px;
+      }
+
+      .backery-boxes li.bad {
+        -moz-box-shadow: 0 0 5px 5px #BA1E20;
+        -webkit-box-shadow: 0 0 5px 5px #BA1E20;
+        box-shadow: 0 0 5px 5px #BA1E20;
+      }
+      .backery-boxes li:hover  {
+          background-color: #fcfcfc;
+          background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#FCFCFC), to(#F1F1F1));
+          background-image: -webkit-linear-gradient(top, #FCFCFC 0%, #F1F1F1 100%);
+          background-image: -moz-linear-gradient(top, #FCFCFC 0%, #F1F1F1 100%);
+          background-image: -ms-linear-gradient(top, #FCFCFC 0%, #F1F1F1 100%);
+          background-image: -o-linear-gradient(top, #FCFCFC 0%, #F1F1F1 100%);
+          background-image: linear-gradient(top, #FCFCFC 0%, #F1F1F1 100%);
+      }
+      .backery-boxes .top, .backery-boxes .middle, .backery-boxes .bottom {
+          text-shadow: 0 1px 0 #ffffff;
+          float: left;
+      }
+
+      .backery-boxes .top {
+          border-bottom: 1px solid #DCDCDC;
+          box-shadow: 0 1px 0 0 #FFFFFF;
+          margin-bottom: 12px;
+          padding: 10px 10px 10px 10px;
+          width: 100px;
+          color: #666666;
+      } 
+
+      .backery-boxes .middle {
+          border-bottom: 1px solid #DCDCDC;
+          box-shadow: 0 1px 0 0 #FFFFFF;
+          margin-bottom: 12px;
+          padding: 10px 10px 10px 10px;
+          width: 100px;
+          color: #666666;
+      }      
+      .backery-boxes .bottom {
+          border-bottom: 1px solid #DCDCDC;
+          padding: 10px 10px 10px 10px;
+          width: 100px;
+          color: #666666;
+      } 
+
+      .backery-boxes .top strong {
+        font-size: 26px;
+        margin-bottom: 3px;
+        margin-top: 3px;
+      }
+      .backery-boxes .middle strong {
+        font-size: 26px;
+        margin-bottom: 3px;
+        margin-top: 3px;
+      }
+      .backery-boxes .bottom  strong {
+        font-size: 26px;
+        margin-bottom: 3px;
+        margin-top: 3px;
+      }
+      .backery-boxes .right strong {
+        font-size: 26px;
+        margin-bottom: 3px;
+        margin-top: 3px;
+      }
+      .backery-boxes .peity_text_good  {
+        color: #459D1C;
+      }
+
+      .backery-boxes .peity_text_neutral {
+        color: #757575;
+      }
+
+      .backery-boxes .peity_text_bad {
+        color: #BA1E20;
+      }
+
+    </style>
+
+}
+
+@scripts = {
+<script src="@routes.Assets.at("javascripts/libs/require-jquery.js")" type="text/javascript" data-main="@routes.Assets.at("javascripts/main")"></script>
+}
+
+@main(Messages("company.name"), scripts, styles) {
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="#">@Messages("company.name")</a>
+    </div>
+  </div>
+</div>    
+
+<div class="container">
+    <div class="row">
+    <div class="span12">
+        <ul class="thumbnails">
+          <li class="span2">
+                <ul class="span2 backery-boxes">
+                  <li class="bad">
+                    <div class="top peity_text_bad">
+                      <strong>189/790</strong>
+                    </div>
+                    <div class="middle peity_text_bad">
+                      <strong>90/90</strong>
+                    </div>
+                    <div class="bottom peity_text_bad">
+                      <strong>547öL98</strong>
+                    </div>
+                  </li>
+                </ul>
+          </li>
+          <li class="span2">
+                <ul class="span2 backery-boxes">
+                  <li>
+                    <div class="top">
+                      <strong>189/790</strong>
+                    </div>
+                    <div class="middle">
+                      <strong>90/90</strong>
+                    </div>
+                    <div class="bottom">
+                      <strong>90/90</strong>
+                    </div>
+                  </li>
+                </ul>
+          </li>
+          <li class="span2">
+                <ul class="span2 backery-boxes">
+                  <li>
+                    <div class="top">
+                      <strong>189/790</strong>
+                    </div>
+                    <div class="middle">
+                      <strong>90/90</strong>
+                    </div>
+                    <div class="bottom">
+                      <strong>90/90</strong>
+                    </div>
+                  </li>
+                </ul>
+          </li>
+          <li class="span2">
+                <ul class="span2 backery-boxes">
+                  <li>
+                    <div class="top">
+                      <strong>189/790</strong>
+                    </div>
+                    <div class="middle">
+                      <strong>90/90</strong>
+                    </div>
+                    <div class="bottom">
+                      <strong>90/90</strong>
+                    </div>
+                  </li>
+                </ul>
+          </li>
+          <li class="span2">
+                <ul class="span2 backery-boxes">
+                  <li>
+                    <div class="top">
+                      <strong>189/790</strong>
+                    </div>
+                    <div class="middle">
+                      <strong>90/90</strong>
+                    </div>
+                    <div class="bottom">
+                      <strong>90/90</strong>
+                    </div>
+                  </li>
+                </ul>
+          </li>
+          <li class="span2">
+                <ul class="span2 backery-boxes">
+                  <li>
+                    <div class="top">
+                      <strong>189/790</strong>
+                    </div>
+                    <div class="middle">
+                      <strong>90/90</strong>
+                    </div>
+                    <div class="bottom">
+                      <strong>90/90</strong>
+                    </div>
+                  </li>
+                </ul>
+          </li>
+          <li class="span2">
+                <ul class="backery backery-boxes">
+                  <li>
+                    <div class="top">
+                      <strong>189/790</strong>
+                    </div>
+                    <div class="middle">
+                      <strong>90/90</strong>
+                    </div>
+                    <div class="bottom">
+                      <strong>90/90</strong>
+                    </div>
+                  </li>
+                </ul>
+          </li>
+          <li class="span2">
+                <ul class="span2 backery-boxes">
+                  <li>
+                    <div class="top">
+                      <strong>189/790</strong>
+                    </div>
+                    <div class="middle">
+                      <strong>90/90</strong>
+                    </div>
+                    <div class="bottom">
+                      <strong>90/90</strong>
+                    </div>
+                  </li>
+                </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div><!-- end of container-->
+}

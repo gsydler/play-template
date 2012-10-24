@@ -10,6 +10,10 @@ object Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
+  def index_backery = Action {
+    Ok(views.html.index_backery("Your new application is ready."))
+  }
+
   def testScripts = Action {
     if (Play.isProd) {
       BadRequest
